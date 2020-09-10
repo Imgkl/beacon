@@ -24,32 +24,6 @@ class _SearchBeaconState extends State<SearchBeacon> {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 40.0),
-          // child: PinCodeFields(
-          //   length: 4,
-          //   fieldBorderStyle: FieldBorderStyle.Square,
-          //   responsive: false,
-          //   fieldHeight: 50.0,
-          //   fieldWidth: 50.0,
-          //   borderWidth: 5.0,
-          //   activeBorderColor: Colors.teal,
-          //   activeBackgroundColor: Colors.tealAccent,
-          //   borderRadius: BorderRadius.circular(20.0),
-          //   keyboardType: TextInputType.number,
-          //   autoHideKeyboard: false,
-          //   fieldBackgroundColor: Color(0xfffad6a6),
-          //   borderColor: Color(0xfff06966),
-          //   onChange: (s) {
-          //     if (s.length >= 4) {
-          //       setState(() {
-          //         showButton = true;
-          //       });
-          //     }else{
-          //       setState(() {
-          //         showButton = false;
-          //       });
-          //     }
-          //   },
-          // ),
           child: PinCodeTextField(
             backgroundColor: Colors.transparent,
             appContext: context,
