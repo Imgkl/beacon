@@ -30,7 +30,19 @@ dependencies:
   google_fonts: ^1.1.0
   flutter_neumorphic: ^3.0.1
   flare_flutter: ^2.0.6
-  flutter_pin_code_fields: ^1.1.0
+  pin_code_fields: ^5.0.1
+  flutter_map: ^0.10.1+1
+  random_string: ^2.1.0
+  provider: ^4.3.2+2
+  geolocator: ^6.0.0+4
+  location: ^3.0.2
+  cupertino_stackview: ^1.0.5
+  awesome_page_transitions: ^1.0.0
+  share: ^0.6.5
+  dough: ^0.3.5
+  line_icons: ^0.2.0
+  flutter_cache_store: ^0.7.2
+  flushbar: ^1.10.4
 
 dev_dependencies:
   flutter_test:
