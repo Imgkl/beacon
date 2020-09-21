@@ -1,12 +1,10 @@
-import 'dart:async';
-
 import 'package:awesome_page_transitions/awesome_page_transitions.dart';
 import 'package:beacon/screen/drop_beacon_sucess.dart';
 import 'package:beacon/services/location_serv.dart';
 import 'package:beacon/widgets/swipe_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:geolocator/geolocator.dart';
+
 import 'package:latlong/latlong.dart';
 import 'package:provider/provider.dart';
 import 'package:random_string/random_string.dart';
@@ -17,35 +15,6 @@ class DropBeacon extends StatefulWidget {
 }
 
 class _DropBeaconState extends State<DropBeacon> {
-  Position _position;
-  StreamSubscription positionStream;
-
-  @override
-  void initState() {
-    positionStream = getPositionStream(
-            desiredAccuracy: LocationAccuracy.high, distanceFilter: 1)
-        .listen((Position position) {
-      setState(() {
-        _position = position;
-      });
-      print(_position.longitude);
-      print(_position.latitude);
-      print(position == null
-          ? 'Unknown'
-          : position.latitude.toString() +
-              ', ' +
-              position.longitude.toString());
-    });
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    if (mounted && positionStream != null) {
-      positionStream.cancel();
-    }
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
